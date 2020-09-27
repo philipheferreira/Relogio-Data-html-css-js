@@ -1,0 +1,48 @@
+*{ 
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{ 
+    background: #333; 
+    background-attachment: fixed;
+    background-blend-mode: hard-light;
+}
+
+.externo{ 
+    position: absolute;
+    top: 80px; 
+    left: 100px;
+    right: 100px;
+    bottom: 80px;
+    background: url();
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 
+                0 0 0 100px rgba(0,0,0,.1);
+} 
+
+.externo h2{ 
+    text-align: center;
+    font-size: 10em;
+    line-height: 0.7em;
+    margin-top: -80px;
+}
+
+.externo h2 span{ 
+    display: block;
+    font-weight: 300;
+    letter-spacing: 6px;
+    font-size: 0.2em;
+
+}
+
+.contagemRegressiva{ 
+    display:flex;
+    margin-top: 50px;
+}
