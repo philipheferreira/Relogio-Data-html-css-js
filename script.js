@@ -1,26 +1,30 @@
-var contadorDate = new Date('jan 1, 2021 00:00:00').getTime();
-
-function novoAno(){ 
-    var agora = new Date().getTime();
-    gap = contadorDate - agora;
-
-    var segundos = 1000;
-    var minutos = segundos * 60;
-    var horas = minutos * 60;
-    var dias = horas * 24;
-
-    var d = Math.floor(gap/(dias));
-    var h = Math.floor((gap % (dias)) / (horas));
-    var m = Math.floor((gap % (horas)) / (minutos));
-    var s = Math.floor((gap % (minutos)) / (segundos));
-
-    document.getElementById('dias').innerHTML = d;
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
     document.getElementById('horas').innerHTML = h;
     document.getElementById('minutos').innerHTML = m;
     document.getElementById('segundos').innerHTML = s;
-
+    document.getElementById('sessao').innerHTML = session;
+    
+    setTimeout(showTime, 1000);
+    
 }
 
-setInterval(function(){ 
-    novoAno();
-}, 1000);
+showTime();
