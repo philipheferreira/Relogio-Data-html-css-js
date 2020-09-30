@@ -3,6 +3,7 @@ function showTime(){
     var h = date.getHours(); // 0 - 23
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
+    var y = date.getFullYear();   
     var session = "AM";
     
     if(h == 0){
@@ -22,6 +23,7 @@ function showTime(){
     document.getElementById('minutos').innerHTML = m;
     document.getElementById('segundos').innerHTML = s;
     document.getElementById('sessao').innerHTML = session;
+    document.getElementById("year").innerHTML = y;
     
     setTimeout(showTime, 1000);
     
