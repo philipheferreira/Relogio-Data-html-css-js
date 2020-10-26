@@ -1,5 +1,9 @@
 function showTime(){
     var date = new Date();
+    var dias = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sabado'];
+    var meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    var dia = dias[ date.getDay() ];
+    var mes = meses[ date.getMonth() ];
     var h = date.getHours(); // 0 - 23
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
@@ -24,6 +28,8 @@ function showTime(){
     document.getElementById('segundos').innerHTML = s;
     document.getElementById('sessao').innerHTML = session;
     document.getElementById("year").innerHTML = y;
+    document.getElementById("dias").innerHTML = dia;
+    document.getElementById("mês").innerHTML = mes;
     
     setTimeout(showTime, 1000);
     
