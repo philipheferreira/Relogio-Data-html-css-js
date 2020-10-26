@@ -2,6 +2,7 @@ function showTime(){
     var date = new Date();
     var dias = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sabado'];
     var meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    var diaNum = date.getDate();
     var dia = dias[ date.getDay() ];
     var mes = meses[ date.getMonth() ];
     var h = date.getHours(); // 0 - 23
@@ -30,6 +31,7 @@ function showTime(){
     document.getElementById("year").innerHTML = y;
     document.getElementById("dias").innerHTML = dia;
     document.getElementById("mês").innerHTML = mes;
+    document.getElementById("diaData").innerHTML = diaNum;
     
     setTimeout(showTime, 1000);
     

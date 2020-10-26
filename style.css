@@ -43,6 +43,14 @@ body{
 
 }
 
+ .relogio h3 {
+            font-size:30px;
+            color: #333;
+            text-align: center;
+            margin-top:0;
+            text-transform: uppercase;
+        }
+
 .tempo{ 
     display: flex;
     margin-top: 50px;
